@@ -1,0 +1,19 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["@oclif/tslint", "tslint:recommended", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": ["bin/run", "jest.config.js"]
+  },
+  "rules": {
+    "interface-name": false,
+    "variable-name": [true, "allow-leading-underscore", "allow-pascal-case"],
+    "max-classes-per-file": [true, 3],
+    "file-name-casing": [
+      true,
+      {
+        "*.ts": "kebab-case",
+        "*.tsx": "pascal-case"
+      }
+    ]
+  }
+}
